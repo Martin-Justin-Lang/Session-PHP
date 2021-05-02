@@ -15,7 +15,14 @@
                     </figcaption>
                 </figure>
             </div>
-        <?php } ?>
+        <?php 
+        }
+        if(isset($_GET['add_to_cart']))
+        {
+            $_SESSION['id'][] = $_GET['add_to_cart'] ;
+        }
+        var_dump($_SESSION);
+         ?>
     </div>
 </section>
 <?php require 'inc/foot.php'; ?>
